@@ -33,7 +33,8 @@
         <span class="chip chip--primary">Super Intelligence Trip</span>
         <h1 class="hero__title">여행의 모든 순간을<br>더 가볍게</h1>
         <p class="hero__desc">sitrip은 여행에 필요한 모든 서비스를 만듭니다.<br class="br-desktop">
-          첫 번째로, 쓴 돈을 기록하고 <strong>AI에게 물어보면 바로 찾아주는 여행 가계부</strong>를 준비하고 있어요.</p>
+          첫 번째로, 쓴 돈을 기록하고 <strong>AI에게 물어보면 바로 찾아주는 여행 가계부</strong>를 준비하고 있어요.<br class="br-desktop">
+          설치 없이 휴대폰과 PC 브라우저에서 바로 쓸 수 있어요.</p>
         <div class="hero__actions">
           <a class="btn btn--primary btn--large" href="#product">여행 가계부 알아보기</a>
           <a class="btn btn--outlined btn--large" href="mailto:nespot2@sitrip.co.kr">문의하기</a>
@@ -109,33 +110,46 @@
             </div>
             <figcaption class="phone__caption">AI 검색</figcaption>
           </figure>
-          <figure class="phone" aria-label="지출 목록 화면 예시">
-            <div class="phone__screen">
-              <div class="app-bar">
-                <span class="app-bar__title">도쿄 여행</span>
-                <span class="app-bar__meta">10.3 – 10.7</span>
+          <figure class="browser" aria-label="PC 브라우저 여행 요약 화면 예시">
+            <div class="browser__window">
+              <div class="browser__bar">
+                <span class="browser__dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="browser__url">app.sitrip.co.kr/trips/tokyo</span>
               </div>
-              <div class="total">
-                <p class="total__label">총 지출</p>
-                <p class="total__amount">₩1,284,000</p>
+              <div class="browser__body">
+                <div>
+                  <div class="app-bar">
+                    <span class="app-bar__title">도쿄 여행</span>
+                    <span class="app-bar__meta">10.3 – 10.7 · 5일</span>
+                  </div>
+                  <div class="total">
+                    <p class="total__label">총 지출</p>
+                    <p class="total__amount">₩1,284,000</p>
+                  </div>
+                  <ul class="bar-list" aria-label="카테고리별 지출">
+                    <li><div class="bar__row"><span>숙소</span><span>₩662,400 · 52%</span></div><div class="bar__track"><div class="bar__fill" style="width: 52%"></div></div></li>
+                    <li><div class="bar__row"><span>쇼핑·기타</span><span>₩259,400 · 20%</span></div><div class="bar__track"><div class="bar__fill" style="width: 20%"></div></div></li>
+                    <li><div class="bar__row"><span>식비</span><span>₩182,200 · 14%</span></div><div class="bar__track"><div class="bar__fill" style="width: 14%"></div></div></li>
+                    <li><div class="bar__row"><span>교통</span><span>₩180,000 · 14%</span></div><div class="bar__track"><div class="bar__fill" style="width: 14%"></div></div></li>
+                  </ul>
+                </div>
+                <div class="side">
+                  <div class="settle">
+                    <p class="total__label">민수에게 받을 돈</p>
+                    <p class="settle__amount">₩82,800</p>
+                    <p class="bubble__sub">시부야 호텔 반값</p>
+                  </div>
+                  <div class="stat">
+                    <p class="total__label">하루 평균</p>
+                    <p class="stat__value">₩256,800</p>
+                  </div>
+                </div>
               </div>
-              <ul class="filter-list" aria-label="카테고리">
-                <li class="chip chip--primary">전체</li>
-                <li class="chip chip--neutral">식비</li>
-                <li class="chip chip--neutral">교통</li>
-                <li class="chip chip--neutral">숙소</li>
-              </ul>
-              <p class="txn-date">10월 4일</p>
-              <ul class="txn-list">
-                <li class="txn"><span class="txn__name">시부야 호텔</span><span class="txn__amt">¥18,000</span><span class="txn__meta">숙소 · 민수와 나눔</span><span class="txn__krw">₩165,600</span></li>
-                <li class="txn"><span class="txn__name">스이카 충전</span><span class="txn__amt">¥3,000</span><span class="txn__meta">교통</span><span class="txn__krw">₩27,600</span></li>
-                <li class="txn"><span class="txn__name">이치란 라멘</span><span class="txn__amt">¥1,980</span><span class="txn__meta">식비</span><span class="txn__krw">₩18,200</span></li>
-              </ul>
             </div>
-            <figcaption class="phone__caption">여행 지출 목록</figcaption>
+            <figcaption class="phone__caption">PC 브라우저 · 여행 요약</figcaption>
           </figure>
         </div>
-        <p class="note note--center">개발 중인 화면 예시예요. 실제 앱과 다를 수 있어요.</p>
+        <p class="note note--center">개발 중인 화면 예시예요. 실제 서비스와 다를 수 있어요.</p>
         <ul class="feature-list">
           <li class="feature">
             <h3 class="feature__title">간편한 지출 기록</h3>
@@ -153,6 +167,10 @@
             <h3 class="feature__title">여행이 끝나면 한눈에</h3>
             <p class="feature__desc">카테고리별, 날짜별로 여행 경비를 정리해서 보여줘요.</p>
           </li>
+          <li class="feature">
+            <h3 class="feature__title">설치 없이 어디서나</h3>
+            <p class="feature__desc">앱을 깔 필요 없이 브라우저로 바로 써요. 여행 중엔 휴대폰으로 기록하고, 돌아와서는 PC 큰 화면으로 정리해요.</p>
+          </li>
         </ul>
         <div class="product__cta">
           <a class="btn btn--primary btn--large" href="mailto:nespot2@sitrip.co.kr?subject=sitrip%20%EC%97%AC%ED%96%89%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%B6%9C%EC%8B%9C%20%EC%95%8C%EB%A6%BC%20%EC%8B%A0%EC%B2%AD&amp;body=%EC%B6%9C%EC%8B%9C%EB%90%98%EB%A9%B4%20%EC%9D%B4%20%EB%A9%94%EC%9D%BC%20%EC%A3%BC%EC%86%8C%EB%A1%9C%20%EC%95%8C%EB%A0%A4%EC%A3%BC%EC%84%B8%EC%9A%94.">출시 소식 받기</a>
@@ -166,12 +184,12 @@
         <p class="eyebrow">In English</p>
         <h2 class="section__title">Making every moment of travel lighter</h2>
         <p class="section__desc">sitrip is a startup based in South Korea, building services for travelers.
-          Our first product is a travel expense tracker that lets you log spending in a few taps and find anything just by asking.</p>
+          Our first product is a travel expense tracker web app that lets you log spending in a few taps and find anything just by asking.</p>
         <div class="grid grid--3">
           <article class="card">
             <span class="card__num">Product</span>
             <h3 class="card__title">Travel expense tracker</h3>
-            <p class="card__desc">Log expenses in any currency, split costs with friends, and see a clear summary by category and date when your trip ends.</p>
+            <p class="card__desc">A web app that works in any browser on your phone or computer, no install needed. Log expenses in any currency, split costs with friends, and see a clear summary when your trip ends.</p>
           </article>
           <article class="card">
             <span class="card__num">Core feature</span>
