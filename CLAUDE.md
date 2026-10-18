@@ -25,6 +25,11 @@ Source: https://www.figma.com/community/file/1355516515676178246/wanted-design-s
 - Never commit personal documents (contracts, IDs, photos). `.gitignore` blocks jpg/jpeg/heic/pdf.
 - Do not put the business address or 사업자등록번호 on the page unless the user asks.
 
+## Search engines
+
+- The site is kept out of search results with `<meta name="robots" content="noindex, nofollow">` in `index.html`. Keep it unless the user asks to allow search.
+- Do not add a `robots.txt` that disallows crawling: blocked crawlers can't see `noindex`, so the URL could still show up in results.
+
 ## Content
 
 - sitrip: 여행에 필요한 모든 서비스를 만드는 회사. First product: 여행 가계부 (in development).
