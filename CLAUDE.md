@@ -8,7 +8,8 @@ Plain HTML + CSS, no build step: `index.html`, `styles.css`, `CNAME`.
 This site uses the **Wanted Design System** (Wanted Lab, CC BY 4.0) as its design basis.
 Source: https://www.figma.com/community/file/1355516515676178246/wanted-design-system
 
-- Keep the Wanted look: tokens in `:root` of `styles.css` (primary `#0066FF`, label/background/line colors, radius 8/12/16/24, Pretendard typography scale). Change or add UI by reusing these tokens and the existing patterns (`.btn`, `.chip`, `.card`, `.feature`, `.section`).
+- Keep the Wanted look: tokens in `:root` of `styles.css` (primary `#0066FF`, label/background/line colors, `--radius-*`, `--space-*`, `--font-*` following the Montage scales, Pretendard). Change or add UI by reusing these tokens and the existing patterns (`.btn`, `.chip`, `.card`, `.feature`, `.section`).
+- Never hard-code a color, spacing, font size or radius in a rule; use a token. Spacing and font sizes must be steps of the Montage scale (the `--space-*` and `--font-*` tokens). Page-level spacing above that scale uses the `--layout-*` tokens.
 - Do not switch to another design system, UI kit, CSS framework (Tailwind, Bootstrap, etc.), or a different color palette/font unless the user explicitly asks to change the design.
 - Dark mode follows `prefers-color-scheme`; when adding a color token, define it in both the light and dark blocks.
 
