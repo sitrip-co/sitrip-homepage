@@ -3,22 +3,26 @@
 Company homepage for sitrip (시트립), served at https://sitrip.co.kr via GitHub Pages.
 Plain HTML + CSS, no build step: `index.html`, `styles.css`, `CNAME`.
 
-## Design system: Wanted Design System (do not replace)
+## Design system: Astryx tokens (do not replace)
 
-This site uses the **Wanted Design System** (Wanted Lab, CC BY 4.0) as its design basis.
-Source: https://www.figma.com/community/file/1355516515676178246/wanted-design-system
+This site uses the token names and values of **Astryx** (Meta's open source design system, MIT) as plain CSS. There is no React and no Astryx package here, only the tokens.
+Source: https://github.com/meta/astryx (`@astryxdesign/theme-neutral` 0.7.16, `dist/theme.css`). The workspace rules are in `../docs/design-system.md`.
 
-- Keep the Wanted look: tokens in `:root` of `styles.css` (primary `#0066FF`, label/background/line colors, `--radius-*`, `--space-*`, `--font-*` following the Montage scales, Pretendard). Change or add UI by reusing these tokens and the existing patterns (`.btn`, `.chip`, `.card`, `.feature`, `.section`).
-- Never hard-code a color, spacing, font size or radius in a rule; use a token. Spacing and font sizes must be steps of the Montage scale (the `--space-*` and `--font-*` tokens). Page-level spacing above that scale uses the `--layout-*` tokens.
-- Do not switch to another design system, UI kit, CSS framework (Tailwind, Bootstrap, etc.), or a different color palette/font unless the user explicitly asks to change the design.
+- Keep the Astryx neutral look: tokens in `:root` of `styles.css` (`--color-*`, `--radius-*`, `--spacing-*`, `--size-element-*`, `--font-size-*`, `--text-*-leading`). Change or add UI by reusing these tokens and the existing patterns (`.btn`, `.chip`, `.card`, `.feature`, `.section`).
+- Two things are sitrip's own, not Astryx's: the accent color (`--color-accent` `#0066FF`, with `--color-on-accent`, `--color-text-accent`, `--color-accent-muted`) and the font (`--font-family-body`, Pretendard).
+- Use `--color-accent` for fills and `--color-text-accent` for text and icons on a background. Text on an accent fill uses `--color-on-accent`.
+- Never hard-code a color, spacing, font size, line height or radius in a rule; use a token. A value that is not a step of the Astryx scale goes to the nearest step. Page-level sizes above the scales use the `--layout-*` tokens.
+- A font size and its line height go together: `xs`/`sm` with `--text-supporting-leading`, `base` with `--text-body-leading`, `lg` with `--text-large-leading`, `xl` with `--text-heading-2-leading`, `2xl` with `--text-heading-1-leading`, `3xl`/`4xl`/`5xl` with `--text-display-3`/`-2`/`-1-leading`.
+- Do not switch to another design system, UI kit, CSS framework (Tailwind, Bootstrap, etc.), or a different color palette/font unless the user explicitly asks to change the design. The Wanted Design System was dropped on 2026-11-18; do not bring it back.
 - Dark mode follows `prefers-color-scheme`; when adding a color token, define it in both the light and dark blocks.
+- Font sizes and line heights have a second set of values for touch screens narrower than 1024px (the `pointer: coarse` block). When adding one of these tokens, define it in both blocks.
 
 ## Licensing rules (commercial site)
 
-- **Keep the attribution** in the footer (`.footer__credit`) and the header comment in `styles.css`. CC BY 4.0 requires it. If you modify the design, it stays "Modified by sitrip."
-- **No photos, illustrations, or stock images.** Do not copy any images, icons, or illustrations from the Wanted Figma file or anywhere else.
-- **Do not use the Wanted logo or the "wanted" name** in sitrip branding (trademark not covered by CC BY).
-- Fonts: only **Pretendard** (SIL OFL 1.1, via jsDelivr). Do not add Wanted Sans or other fonts unless their license is confirmed for commercial use.
+- **Keep the MIT notice** in the header comment of `styles.css` (Astryx copyright line and permission text) and the credit in the footer (`.footer__credit`). If you modify the design, it stays "Modified by sitrip."
+- **No photos, illustrations, or stock images.** Do not copy any images, icons, or illustrations from the Astryx site, its templates or anywhere else.
+- **Do not use the Meta or Astryx logo or name** in sitrip branding (trademarks are not covered by MIT). Naming Astryx in the license credit is fine.
+- Fonts: only **Pretendard** (SIL OFL 1.1, via jsDelivr). Do not add Figtree (the Astryx neutral font, no Korean glyphs) or other fonts unless their license is confirmed for commercial use.
 - Only add assets whose license clearly allows commercial use, and note the license in the footer credit.
 
 ## Privacy
